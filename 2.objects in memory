@@ -1,0 +1,10 @@
+objects_list <- ls()
+if (length(objects_list) == 0) {
+  cat("No objects in memory.\n")
+} else {
+  cat("Objects in memory:\n")
+  for (obj in objects_list) {
+    obj_size <- object.size(get(obj))  
+    cat(obj, ":", format(obj_size, units = "auto"), "\n")  
+  }
+}
