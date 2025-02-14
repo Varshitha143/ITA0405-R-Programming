@@ -1,0 +1,14 @@
+get_unique_characters <- function(input_string) {
+  unique_chars <- unique(strsplit(input_string, NULL)[[1]])
+  return(unique_chars)
+}
+get_unique_numbers <- function(input_vector) {
+  unique_numbers <- unique(input_vector)
+  return(unique_numbers)
+}
+input_string <- readline(prompt = "Enter a string: ")
+input_vector <- as.numeric(unlist(strsplit(readline(prompt = "Enter numbers separated by spaces: "), " ")))
+unique_characters <- get_unique_characters(input_string)
+cat("\nUnique characters in the string:", unique_characters, "\n")
+unique_numbers <- get_unique_numbers(input_vector)
+cat("Unique numbers in the vector:", unique_numbers, "\n")
